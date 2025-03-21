@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import { Terminal, Code, Eye, Mail, MapPin, Github, ArrowRight, Send } from 'lucide-react';
 
@@ -58,13 +57,11 @@ const Index: React.FC = () => {
   
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // This would typically handle form submission
     alert('Message sent! (This is a demo - no actual message was sent)');
   };
   
   return (
     <div className={`min-h-screen overflow-x-hidden ${isLoaded ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}>
-      {/* Navigation */}
       <header className="fixed top-0 left-0 right-0 z-50 glass-card px-6 py-4">
         <nav className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="text-hacker-red font-bold text-xl glowing-border px-3 py-2 inline-block animate-pulse">
@@ -94,7 +91,6 @@ const Index: React.FC = () => {
         </nav>
       </header>
       
-      {/* Hero Section */}
       <section ref={homeRef} className="min-h-screen pt-32 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -175,7 +171,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* About Section */}
       <section ref={aboutRef} className="min-h-screen pt-32 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="inline-flex items-center space-x-2 text-hacker-red mb-4">
@@ -191,11 +186,13 @@ const Index: React.FC = () => {
               </h2>
               
               <div className="glass-card rounded-xl overflow-hidden animate-fade-in">
-                <div className="h-64 md:h-96 bg-hacker-dark relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="text-8xl font-bold text-hacker-red/30 animate-float">MKM</div>
-                  </div>
-                  <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-hacker-dark to-transparent"></div>
+                <div className="h-64 md:h-96 bg-hacker-dark relative flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/0a932973-0837-40c7-a1dc-2395a35f3745.png" 
+                    alt="Digital hacker with glowing green face" 
+                    className="object-contain h-full w-full p-4"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-hacker-dark to-transparent"></div>
                 </div>
               </div>
             </div>
@@ -275,7 +272,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Contact Section */}
       <section ref={contactRef} className="min-h-screen pt-32 pb-20 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="inline-flex items-center space-x-2 text-hacker-red mb-4">
@@ -365,7 +361,6 @@ const Index: React.FC = () => {
         </div>
       </section>
       
-      {/* Footer */}
       <footer className="bg-hacker-darker border-t border-hacker-red/10 py-8 px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="text-hacker-red font-bold text-xl mb-4 md:mb-0">MKM</div>
